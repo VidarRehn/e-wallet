@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
 import Header from '../../components/Header'
-import Card from '../../components/Card'
+import CardsList from '../../components/CardsList'
 
 import { getUser } from "../../redux/userSlice"
 
@@ -22,7 +22,7 @@ const Home = () => {
     return (
         <>
             <Header text={'E-WALLET'} />
-            {user ? <Card user={user} /> : 'Loading...'}
+            {user ? <CardsList user={user} /> : 'Loading...'}
             <button onClick={() => navigate('/addcard')}>Add new card</button>
         </>
     )
