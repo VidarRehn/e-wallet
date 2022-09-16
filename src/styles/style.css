@@ -109,6 +109,20 @@ body {
           flex-direction: column;
 }
 
+.App .add-new-card-form .input label {
+  font-size: 12px;
+}
+
+.App .add-new-card-form .small-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 button, input, select, option {
   padding: 4px 12px;
   color: #1e1e2d;

@@ -38,9 +38,9 @@ const AddCard = () => {
             <Header text={'ADD NEW CARD'} />
             <button onClick={() => navigate('/')}>See all cards</button>
             <form className="add-new-card-form" onSubmit={(e) => addCardOnSubmit(e)}>
-                <div>
+                <div className="input">
                     <label htmlFor="type">VENDOR</label>
-                    <select className="input" name="type" id="type" defaultValue={'default'} required>
+                    <select name="type" id="type" defaultValue={'default'} required>
                         <option value={'default'} disabled>Choose</option>
                         <option value="Mastercard">Mastercard</option>
                         <option value="Visa">Visa</option>
@@ -56,7 +56,7 @@ const AddCard = () => {
                     <label htmlFor="cardholder-name">CARDHOLDER NAME</label>
                     <input type="text" name="cardholder-name" id="cardholder-name" value={fullName} readOnly />
                 </div>
-                <div>
+                <div className="small-input">
                     <div className="input">
                         <label htmlFor="valid">VALID THRU</label>
                         <input type="text" name="valid" id="valid" placeholder="XX / XX" required />

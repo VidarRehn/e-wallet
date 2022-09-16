@@ -89,6 +89,15 @@ body {
         .input {
             display: flex;
             flex-direction: column;
+
+            label {
+                font-size: 12px;
+            }
+        }
+
+        .small-input {
+            display: flex;
+            flex-direction: row;
         }
     }
 
