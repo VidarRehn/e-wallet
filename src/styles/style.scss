@@ -26,6 +26,10 @@ body {
 
     .active-card {
 
+        h4 {
+            margin-bottom: 10px;
+        }
+
         .card {
             border: 5px solid green;
         }
@@ -41,7 +45,11 @@ body {
 
             &:hover {
                 background-color: rgb(135, 87, 87);
-                transform: rotate(.5deg);
+                // transform: rotate(.5deg);
+
+                .hidden-buttons {
+                    display: block;
+                }
             }
         }
 
@@ -59,13 +67,18 @@ body {
         outline: 1px solid green;
         background-color: rgb(60, 32, 32);
         border-radius: 10px;
+        box-shadow: 0px 0px 5px 5px rgb(23, 23, 36);
+
+        .hidden-buttons {
+            display: none;
+        }
     }
 
     .add-new-card-btn {
         width: 280px;
         height: 40px;
         position: absolute;
-        bottom: 20px;
+        bottom: 30px;
     }
 
 }

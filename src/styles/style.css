@@ -37,6 +37,10 @@ body {
   padding: 20px;
 }
 
+.App .active-card h4 {
+  margin-bottom: 10px;
+}
+
 .App .active-card .card {
   border: 5px solid green;
 }
@@ -53,8 +57,10 @@ body {
 
 .App .inactive-cards .card:hover {
   background-color: #875757;
-  -webkit-transform: rotate(0.5deg);
-          transform: rotate(0.5deg);
+}
+
+.App .inactive-cards .card:hover .hidden-buttons {
+  display: block;
 }
 
 .App .inactive-cards .card:nth-of-type(1) {
@@ -75,13 +81,19 @@ body {
   outline: 1px solid green;
   background-color: #3c2020;
   border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px 5px #171724;
+          box-shadow: 0px 0px 5px 5px #171724;
+}
+
+.App .card .hidden-buttons {
+  display: none;
 }
 
 .App .add-new-card-btn {
   width: 280px;
   height: 40px;
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
 }
 
 button, input, select, option {

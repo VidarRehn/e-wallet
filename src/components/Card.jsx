@@ -9,6 +9,10 @@ const Card = ( {cardInfo} ) => {
             <p>{cardNumber}</p>
             <p>{valid}</p>
             <p>{type}</p>
+            <div className="hidden-buttons">
+                <button>make active</button>
+                <button>remove card</button>
+            </div>
         </div>
     )
 }
