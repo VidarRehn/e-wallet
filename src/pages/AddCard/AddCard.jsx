@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router"
 import { useSelector, useDispatch } from 'react-redux'
 import Header from "../../components/Header"
-import { addCard } from "../../redux/cardsSlice"
+import { addCard, changeActive } from "../../redux/cardsSlice"
 
 const AddCard = () => {
 
@@ -12,15 +12,35 @@ const AddCard = () => {
 
     let fullName = (`${location.state.results[0].name.first} ${location.state.results[0].name.last}`).toUpperCase()
 
+    const addCardOnSubmit = (e) => {
+        e.preventDefault()
+        dispatch(changeActive())
+        const type = document.querySelector('#type')
+        const cardNumber= document.querySelector('#card-number')
+        const cardHolder = document.querySelector('#cardholder-name')
+        const valid = document.querySelector('#valid')
+        const cvc = document.querySelector('#cvc')
+        const newCard = {
+            fullName: cardHolder.value,
+            type: type.value,
+            cardNumber: cardNumber.value,
+            valid: valid.value,
+            cvc: cvc.value,
+            active: true
+        }
+        dispatch(addCard(newCard))
+        navigate('/')
+    }
+
     return (
         <>
             <Header text={'ADD NEW CARD'} />
             <button onClick={() => navigate('/')}>See all cards</button>
-            <form>
+            <form onSubmit={(e) => addCardOnSubmit(e)}>
                 <div>
-                    <label htmlFor="vendor">VENDOR</label>
-                    <select name="vendor" id="vendor">
-                        <option selected disabled>Choose</option>
+                    <label htmlFor="type">VENDOR</label>
+                    <select name="type" id="type" defaultValue={'default'}>
+                        <option value={'default'} disabled>Choose</option>
                         <option value="Mastercard">Mastercard</option>
                         <option value="Visa">Visa</option>
                         <option value="American Express">American Express</option>

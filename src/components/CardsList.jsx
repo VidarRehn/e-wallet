@@ -19,6 +19,7 @@ const CardsList = ( {user} ) => {
                 type: ['Mastercard', 'Visa', 'American Express', 'Diners'][Math.floor(Math.random()*4)],
                 cardNumber: '1234 1234 1234 1234',
                 valid: '12/25',
+                cvc: '123',
                 active: true
             }
             dispatch(addCard(newCard))

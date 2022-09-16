@@ -9,9 +9,12 @@ const cardsSlice = createSlice({
     reducers: {
         addCard: (state, action) => {
             state.cards.push(action.payload)
+        },
+        changeActive: (state, action) => {
+            state.cards.forEach(card => card.active = false)
         }
     }
 })
 
-export const { addCard } = cardsSlice.actions
+export const { addCard, changeActive } = cardsSlice.actions
 export default cardsSlice.reducer
