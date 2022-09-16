@@ -3,8 +3,9 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #dedede;
+  text-align: center;
 }
 
 body {
@@ -32,10 +33,55 @@ body {
           align-items: center;
 }
 
-.App .cards-list .card {
-  height: 215px;
-  width: 350px;
+.App header {
+  padding: 20px;
+}
+
+.App .active-card .card {
+  border: 5px solid green;
+}
+
+.App .inactive-cards {
+  position: relative;
+}
+
+.App .inactive-cards .card {
+  position: absolute;
+  border: 5px solid red;
+  left: -140px;
+}
+
+.App .inactive-cards .card:hover {
+  background-color: #875757;
+  -webkit-transform: rotate(0.5deg);
+          transform: rotate(0.5deg);
+}
+
+.App .inactive-cards .card:nth-of-type(1) {
+  top: 35px;
+}
+
+.App .inactive-cards .card:nth-of-type(2) {
+  top: 70px;
+}
+
+.App .inactive-cards .card:nth-of-type(3) {
+  top: 105px;
+}
+
+.App .card {
+  height: 165px;
+  width: 280px;
   outline: 1px solid green;
+  background-color: #3c2020;
+  border-radius: 10px;
+}
+
+.App .add-new-card-btn {
+  width: 280px;
+  height: 40px;
+  position: absolute;
+  bottom: 20px;
 }
 
 button, input, select, option {
@@ -43,7 +89,8 @@ button, input, select, option {
   color: #1e1e2d;
 }
 
-.active {
-  border: 3px solid red;
+a {
+  text-decoration: none;
+  color: #1e1e2d;
 }
 /*# sourceMappingURL=style.css.map */

@@ -23,7 +23,7 @@ const Home = () => {
         <>
             <Header text={'E-WALLET'} />
             {user ? <CardsList user={user} /> : 'Loading...'}
-            <Link to={'/addcard'} state={user}>Add new card</Link>
+            <button className='add-new-card-btn'><Link to={'/addcard'} state={user}>Add new card</Link></button>
         </>
     )
 }

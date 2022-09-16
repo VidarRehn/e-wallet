@@ -28,9 +28,15 @@ const CardsList = ( {user} ) => {
     
 
     return (
-        <div className='cards-list'>
-            {cards && cards.map((card, i) => <Card key={i} cardInfo={card} />)}
-        </div>
+        <>
+            <div className='active-card'>
+                <h4>ACTIVE CARD</h4>
+            {cards && cards.map((card, i) => card.active ? <Card key={i} cardInfo={card} /> : null)}
+            </div>
+            <div className='inactive-cards'>
+            {cards && cards.map((card, i) => !card.active ? <Card key={i} cardInfo={card} /> : null)}
+            </div>
+        </>
     )
 }
 
