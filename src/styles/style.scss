@@ -20,6 +20,7 @@ body {
     align-items: center;
 }
 
-button, input {
+button, input, select, option {
+    padding: 4px 12px;
     color: rgb(30, 30, 45);
 }

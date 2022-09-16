@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
 import Header from '../../components/Header'
@@ -23,7 +23,7 @@ const Home = () => {
         <>
             <Header text={'E-WALLET'} />
             {user ? <CardsList user={user} /> : 'Loading...'}
-            <button onClick={() => navigate('/addcard')}>Add new card</button>
+            <Link to={'/addcard'} state={user}>Add new card</Link>
         </>
     )
 }

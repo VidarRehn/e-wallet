@@ -32,7 +32,8 @@ body {
           align-items: center;
 }
 
-button, input {
+button, input, select, option {
+  padding: 4px 12px;
   color: #1e1e2d;
 }
 /*# sourceMappingURL=style.css.map */
