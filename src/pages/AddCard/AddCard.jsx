@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router"
 import { useSelector, useDispatch } from 'react-redux'
 import Header from "../../components/Header"
-import { addCard, changeActive } from "../../redux/cardsSlice"
+import { addCard, changeActive, sortCards } from "../../redux/cardsSlice"
 
 const AddCard = () => {
 
@@ -29,6 +29,7 @@ const AddCard = () => {
             active: true
         }
         dispatch(addCard(newCard))
+        dispatch(sortCards())
         navigate('/')
     }
 
@@ -39,7 +40,7 @@ const AddCard = () => {
             <form onSubmit={(e) => addCardOnSubmit(e)}>
                 <div>
                     <label htmlFor="type">VENDOR</label>
-                    <select name="type" id="type" defaultValue={'default'}>
+                    <select name="type" id="type" defaultValue={'default'} required>
                         <option value={'default'} disabled>Choose</option>
                         <option value="Mastercard">Mastercard</option>
                         <option value="Visa">Visa</option>
@@ -49,7 +50,7 @@ const AddCard = () => {
                 </div>
                 <div>
                     <label htmlFor="card-number">CARD NUMBER</label>
-                    <input type="text" name="card-number" id="card-number" />
+                    <input type="text" name="card-number" id="card-number" required />
                 </div>
                 <div>
                     <label htmlFor="cardholder-name">CARDHOLDER NAME</label>
@@ -58,11 +59,11 @@ const AddCard = () => {
                 <div>
                     <div>
                         <label htmlFor="valid">VALID THRU</label>
-                        <input type="text" name="valid" id="valid" />
+                        <input type="text" name="valid" id="valid" required />
                     </div>
                     <div>
                     <label htmlFor="cvc">CVC</label>
-                    <input type="text" name="cvc" id="cvc" />
+                    <input type="text" name="cvc" id="cvc" required />
                     </div>
                 </div>
                 <button>ADD CARD</button>

@@ -14,12 +14,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #1e1e2d;
 }
 
 .App {
-  width: 400px;
+  max-width: 400px;
   min-height: 100vh;
-  background-color: #1e1e2d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,6 +30,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.App .cards-list .card {
+  height: 215px;
+  width: 350px;
+  outline: 1px solid green;
 }
 
 button, input, select, option {

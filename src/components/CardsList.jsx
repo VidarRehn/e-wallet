@@ -28,7 +28,7 @@ const CardsList = ( {user} ) => {
     
 
     return (
-        <div>
+        <div className='cards-list'>
             {cards && cards.map((card, i) => <Card key={i} cardInfo={card} />)}
         </div>
     )

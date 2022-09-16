@@ -12,9 +12,12 @@ const cardsSlice = createSlice({
         },
         changeActive: (state, action) => {
             state.cards.forEach(card => card.active = false)
+        },
+        sortCards: (state, action) => {
+            state.cards.sort((a,b) => b.active - a.active)
         }
     }
 })
 
-export const { addCard, changeActive } = cardsSlice.actions
+export const { addCard, changeActive, sortCards } = cardsSlice.actions
 export default cardsSlice.reducer
