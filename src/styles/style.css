@@ -87,6 +87,9 @@ body {
 
 .App .card .hidden-buttons {
   display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 
 .App .add-new-card-btn {
@@ -96,9 +99,27 @@ body {
   bottom: 30px;
 }
 
+.App .add-new-card-form .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 button, input, select, option {
   padding: 4px 12px;
   color: #1e1e2d;
+}
+
+input, select, option, label {
+  text-align: left;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 a {

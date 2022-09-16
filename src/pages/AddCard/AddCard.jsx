@@ -37,10 +37,10 @@ const AddCard = () => {
         <>
             <Header text={'ADD NEW CARD'} />
             <button onClick={() => navigate('/')}>See all cards</button>
-            <form onSubmit={(e) => addCardOnSubmit(e)}>
+            <form className="add-new-card-form" onSubmit={(e) => addCardOnSubmit(e)}>
                 <div>
                     <label htmlFor="type">VENDOR</label>
-                    <select name="type" id="type" defaultValue={'default'} required>
+                    <select className="input" name="type" id="type" defaultValue={'default'} required>
                         <option value={'default'} disabled>Choose</option>
                         <option value="Mastercard">Mastercard</option>
                         <option value="Visa">Visa</option>
@@ -48,22 +48,22 @@ const AddCard = () => {
                         <option value="Diners">Diners</option>
                     </select>
                 </div>
-                <div>
+                <div className="input">
                     <label htmlFor="card-number">CARD NUMBER</label>
-                    <input type="text" name="card-number" id="card-number" required />
+                    <input type="number" name="card-number" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" required />
                 </div>
-                <div>
+                <div className="input">
                     <label htmlFor="cardholder-name">CARDHOLDER NAME</label>
                     <input type="text" name="cardholder-name" id="cardholder-name" value={fullName} readOnly />
                 </div>
                 <div>
-                    <div>
+                    <div className="input">
                         <label htmlFor="valid">VALID THRU</label>
-                        <input type="text" name="valid" id="valid" required />
+                        <input type="text" name="valid" id="valid" placeholder="XX / XX" required />
                     </div>
-                    <div>
-                    <label htmlFor="cvc">CVC</label>
-                    <input type="text" name="cvc" id="cvc" required />
+                    <div className="input">
+                        <label htmlFor="cvc">CVC</label>
+                        <input type="text" name="cvc" id="cvc" placeholder="XXX" required />
                     </div>
                 </div>
                 <button>ADD CARD</button>

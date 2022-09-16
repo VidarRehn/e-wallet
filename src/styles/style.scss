@@ -71,6 +71,9 @@ body {
 
         .hidden-buttons {
             display: none;
+            position: absolute;
+            top: 5px;
+            right: 5px;
         }
     }
 
@@ -81,11 +84,27 @@ body {
         bottom: 30px;
     }
 
+    .add-new-card-form {
+
+        .input {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
 }
 
 button, input, select, option {
     padding: 4px 12px;
     color: rgb(30, 30, 45);
+}
+
+input, select, option, label {
+    text-align: left;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 a {
