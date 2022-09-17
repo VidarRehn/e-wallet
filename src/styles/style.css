@@ -15,7 +15,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #1e1e2d;
+  background: linear-gradient(45deg, #0f0e1c, #250a37);
 }
 
 .App {
@@ -41,22 +41,17 @@ body {
   margin-bottom: 10px;
 }
 
-.App .active-card .card {
-  border: 5px solid green;
-}
-
 .App .inactive-cards {
   position: relative;
 }
 
 .App .inactive-cards .card {
   position: absolute;
-  border: 5px solid red;
   left: -140px;
 }
 
 .App .inactive-cards .card:hover {
-  background-color: #875757;
+  background: #875757;
 }
 
 .App .inactive-cards .card:hover .hidden-buttons {
@@ -78,9 +73,7 @@ body {
 .App .card {
   height: 165px;
   width: 280px;
-  outline: 1px solid green;
-  background-color: #3c2020;
-  border-radius: 10px;
+  border-radius: 8px;
   -webkit-box-shadow: 0px 0px 5px 5px #171724;
           box-shadow: 0px 0px 5px 5px #171724;
 }
@@ -90,6 +83,18 @@ body {
   position: absolute;
   top: 5px;
   right: 5px;
+}
+
+.App .American {
+  background: linear-gradient(325deg, #005aa0 20%, #0091ff 65% 66%, #0064c8 100%);
+}
+
+.App .Mastercard {
+  background: linear-gradient(325deg, #00781e 20%, #00b437 65% 66%, #00781e 100%);
+}
+
+.App .Visa {
+  background: linear-gradient(325deg, #730a00 20%, #be0f00 65% 66%, #7d0a00 100%);
 }
 
 .App .add-new-card-btn {

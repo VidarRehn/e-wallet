@@ -10,7 +10,7 @@
 body {
     display: flex;
     justify-content: center;
-    background-color: rgb(30, 30, 45);
+    background: linear-gradient(45deg, rgb(15, 14, 28), rgb(37, 10, 55));
 }
 
 .App {
@@ -29,10 +29,6 @@ body {
         h4 {
             margin-bottom: 10px;
         }
-
-        .card {
-            border: 5px solid green;
-        }
     }
 
     .inactive-cards {
@@ -40,11 +36,11 @@ body {
 
         .card {
             position: absolute;
-            border: 5px solid red;
+
             left: -140px;
 
             &:hover {
-                background-color: rgb(135, 87, 87);
+                background: rgb(135, 87, 87);
                 // transform: rotate(.5deg);
 
                 .hidden-buttons {
@@ -64,9 +60,7 @@ body {
     .card {
         height: 165px;
         width: 280px;
-        outline: 1px solid green;
-        background-color: rgb(60, 32, 32);
-        border-radius: 10px;
+        border-radius: 8px;
         box-shadow: 0px 0px 5px 5px rgb(23, 23, 36);
 
         .hidden-buttons {
@@ -75,6 +69,30 @@ body {
             top: 5px;
             right: 5px;
         }
+    }
+
+    .American {
+        background: linear-gradient(
+            325deg, 
+            rgb(0, 90, 160) 20%,
+            rgb(0, 145, 255) 65% 66%,
+            rgb(0, 100, 200) 100%);
+    }
+
+    .Mastercard {
+        background: linear-gradient(
+            325deg, 
+            rgb(0, 120, 30) 20%,
+            rgb(0, 180, 55) 65% 66%,
+            rgb(0, 120, 30) 100%);
+    }
+
+    .Visa {
+        background: linear-gradient(
+            325deg, 
+            rgb(115, 10, 0) 20%,
+            rgb(190, 15, 0) 65% 66%,
+            rgb(125, 10, 0) 100%);
     }
 
     .add-new-card-btn {
