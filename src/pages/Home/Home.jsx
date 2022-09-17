@@ -12,6 +12,7 @@ const Home = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const { user, status } = useSelector(state => state.user)
+    const { cards } = useSelector(state => state.cards)
 
     useEffect(() => {
         if (!user) {
@@ -23,7 +24,8 @@ const Home = () => {
         <>
             <Header text={'E-WALLET'} />
             {user ? <CardsList user={user} /> : 'Loading...'}
-            <button className='add-new-card-btn'><Link to={'/addcard'} state={user}>Add new card</Link></button>
+            {(cards.length < 4) ?  <button className='add-new-card-btn'><Link to={'/addcard'} state={user}>Add new card</Link></button> : <p>nu är det för många</p>}
+           
         </>
     )
 }

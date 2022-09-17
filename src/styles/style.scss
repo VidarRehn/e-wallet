@@ -58,10 +58,62 @@ body {
     }
 
     .card {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
         height: 165px;
         width: 280px;
         border-radius: 8px;
         box-shadow: 0px 0px 5px 5px rgb(23, 23, 36);
+
+        .card-images {
+            flex-basis: 50%;
+            display: flex;
+            justify-content: space-between;
+
+            .chip {
+                width: 50px;
+                height: 30px;
+                background-color: rgb(222, 217, 185);
+                align-self: flex-end;
+                margin-bottom: 10px;
+                border-radius: 3px;
+            }
+
+            .logo {
+                width: 50px;
+                height: 30px;
+                background-color: rgb(20, 19, 15);
+            }
+        }
+
+        .card-number {
+            font-size: 18px;
+            flex-basis: 25%;
+            display: flex;
+
+            p {
+                text-shadow: (.5px .5px 1px rgb(41, 41, 41), -.5px -.5px 1px rgb(197, 197, 197))
+
+            }
+        }
+
+        .card-info {
+            flex-basis: 25%;
+            display: flex;
+            justify-content: space-between;
+
+            div:first-child {
+
+                .label {
+                    text-align: left;
+                }
+            }
+
+            .label {
+                font-size: 10px;
+            }
+        }
 
         .hidden-buttons {
             display: none;

@@ -36,7 +36,6 @@ const AddCard = () => {
     return (
         <>
             <Header text={'ADD NEW CARD'} />
-            <button onClick={() => navigate('/')}>See all cards</button>
             <form className="add-new-card-form" onSubmit={(e) => addCardOnSubmit(e)}>
                 <div className="input">
                     <label htmlFor="type">VENDOR</label>
@@ -67,6 +66,7 @@ const AddCard = () => {
                     </div>
                 </div>
                 <button>ADD CARD</button>
+                <button onClick={() => navigate('/')}>See all cards</button>
             </form>
         </>
     )
