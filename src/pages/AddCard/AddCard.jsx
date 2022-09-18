@@ -44,6 +44,25 @@ const AddCard = () => {
     return (
         <>
             <Header text={'ADD NEW CARD'} />
+            <div className="card no-vendor">
+            <div className="card-images">
+                <div className="chip"></div>
+                <div className="logo"></div>
+            </div>
+            <div className="card-number">
+                <p>XXXX-XXXX-XXXX-XXXX</p>
+            </div>
+            <div className="card-info">
+                <div>
+                    <p className="label">CARD HOLDER</p>
+                    <p>YOUR NAME</p>
+                </div>
+                <div>
+                    <p className="label">VALID THRU</p>
+                    <p>XX / XX</p>
+                </div>
+            </div>
+        </div>
             <form className="add-new-card-form" onSubmit={(e) => addCardOnSubmit(e)}>
                 <div className="input">
                     <label htmlFor="type">VENDOR</label>
