@@ -24,9 +24,17 @@ const cardsSlice = createSlice({
                     card.active = false
                 }
             })
+        },
+        removeCard: (state, action) => {
+            let cardIndex = state.cards.findIndex(card => {
+                if (card.cardNumber === action.payload.cardNumber) {
+                    return card
+                }
+            })
+            state.cards.splice(cardIndex, 1)
         }
     }
 })
 
-export const { addCard, removeActive, sortCards, makeActive } = cardsSlice.actions
+export const { addCard, removeActive, sortCards, makeActive, removeCard } = cardsSlice.actions
 export default cardsSlice.reducer

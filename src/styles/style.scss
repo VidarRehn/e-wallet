@@ -40,8 +40,6 @@ body {
             left: -140px;
 
             &:hover {
-                background: rgb(135, 87, 87);
-                // transform: rotate(.5deg);
 
                 .hidden-buttons {
                     display: block;
@@ -51,7 +49,7 @@ body {
 
         @for $i from 1 to 4 {
             .card:nth-of-type(#{$i}) {
-                top: $i*35px;
+                top: $i*40px;
             }
         }
 

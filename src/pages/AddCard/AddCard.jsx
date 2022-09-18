@@ -56,7 +56,7 @@ const AddCard = () => {
                 </div>
                 <div className="input">
                     <label htmlFor="card-number">CARD NUMBER</label>
-                    <input type="number" name="card-number" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" required />
+                    <input type="text" name="card-number" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" pattern="[0-9]{16}" required />
                 </div>
                 <div className="input">
                     <label htmlFor="cardholder-name">CARDHOLDER NAME</label>
@@ -65,11 +65,11 @@ const AddCard = () => {
                 <div className="small-input">
                     <div className="input">
                         <label htmlFor="valid">VALID THRU</label>
-                        <input type="text" name="valid" id="valid" placeholder="XX / XX" required />
+                        <input type="text" name="valid" id="valid" placeholder="XX/XX" pattern="[0-9]{4}" required />
                     </div>
                     <div className="input">
                         <label htmlFor="cvc">CVC</label>
-                        <input type="text" name="cvc" id="cvc" placeholder="XXX" required />
+                        <input type="text" name="cvc" id="cvc" placeholder="XXX" pattern="[0-9]{3}" required />
                     </div>
                 </div>
                 <button>ADD CARD</button>
