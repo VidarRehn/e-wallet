@@ -105,13 +105,13 @@ body {
 
             div:first-child {
 
-                .label {
+                p {
                     text-align: left;
                 }
             }
 
             .label {
-                font-size: 10px;
+                font-size: 8px;
             }
         }
 
@@ -145,6 +145,14 @@ body {
             rgb(115, 10, 0) 20%,
             rgb(190, 15, 0) 65% 66%,
             rgb(125, 10, 0) 100%);
+    }
+
+    .Diners {
+        background: linear-gradient(
+            325deg, 
+            rgb(140, 125, 0) 20%,
+            rgb(190, 170, 0) 65% 66%,
+            rgb(150, 135, 0) 100%);
     }
 
     .add-new-card-btn {

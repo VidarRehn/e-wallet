@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router"
 import { useSelector, useDispatch } from 'react-redux'
 import Header from "../../components/Header"
-import { addCard, changeActive, sortCards } from "../../redux/cardsSlice"
+import { addCard, removeActive, sortCards } from "../../redux/cardsSlice"
 
 const AddCard = () => {
 
@@ -14,20 +14,28 @@ const AddCard = () => {
 
     const addCardOnSubmit = (e) => {
         e.preventDefault()
-        dispatch(changeActive())
-        const type = document.querySelector('#type')
-        const cardNumber= document.querySelector('#card-number')
-        const cardHolder = document.querySelector('#cardholder-name')
-        const valid = document.querySelector('#valid')
-        const cvc = document.querySelector('#cvc')
+        dispatch(removeActive())
+        const type = document.querySelector('#type').value
+        const cardNumber= document.querySelector('#card-number').value
+        let styledCardNumber = cardNumber.split('').map((number, index) => {
+            if (index === 3 || index === 7 || index === 11) {
+                return number + ' '
+            } else {
+                return number
+            }
+        }).join('')
+        const cardHolder = document.querySelector('#cardholder-name').value
+        const valid = document.querySelector('#valid').value
+        const cvc = document.querySelector('#cvc').value
         const newCard = {
-            fullName: cardHolder.value,
-            type: type.value,
-            cardNumber: cardNumber.value,
-            valid: valid.value,
-            cvc: cvc.value,
+            fullName: cardHolder,
+            type: type,
+            cardNumber: styledCardNumber,
+            valid: valid,
+            cvc: cvc,
             active: true
         }
+
         dispatch(addCard(newCard))
         dispatch(sortCards())
         navigate('/')
@@ -39,8 +47,7 @@ const AddCard = () => {
             <form className="add-new-card-form" onSubmit={(e) => addCardOnSubmit(e)}>
                 <div className="input">
                     <label htmlFor="type">VENDOR</label>
-                    <select name="type" id="type" defaultValue={'default'} required>
-                        <option value={'default'} disabled>Choose</option>
+                    <select name="type" id="type">
                         <option value="Mastercard">Mastercard</option>
                         <option value="Visa">Visa</option>
                         <option value="American Express">American Express</option>

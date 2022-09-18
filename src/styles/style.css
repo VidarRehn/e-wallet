@@ -137,12 +137,12 @@ body {
           justify-content: space-between;
 }
 
-.App .card .card-info div:first-child .label {
+.App .card .card-info div:first-child p {
   text-align: left;
 }
 
 .App .card .card-info .label {
-  font-size: 10px;
+  font-size: 8px;
 }
 
 .App .card .hidden-buttons {
@@ -162,6 +162,10 @@ body {
 
 .App .Visa {
   background: linear-gradient(325deg, #730a00 20%, #be0f00 65% 66%, #7d0a00 100%);
+}
+
+.App .Diners {
+  background: linear-gradient(325deg, #8c7d00 20%, #beaa00 65% 66%, #968700 100%);
 }
 
 .App .add-new-card-btn {

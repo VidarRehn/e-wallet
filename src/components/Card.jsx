@@ -1,7 +1,17 @@
+import { useSelector, useDispatch } from 'react-redux'
+import { removeActive, makeActive } from "../redux/cardsSlice"
 
 const Card = ( {cardInfo} ) => {
+
+    const dispatch = useDispatch()
     
     let { fullName, cardNumber, valid, type } = cardInfo
+
+    const makeActiveOnClick = (e) => {
+        console.log(e.target.parentElement.parentElement)
+        // dispatch(removeActive())
+        dispatch(makeActive(cardInfo))
+    }
 
     return (
         <div className={cardInfo.active ? `active card ${type}` : `card ${type}`}>
@@ -22,10 +32,11 @@ const Card = ( {cardInfo} ) => {
                     <p>{valid}</p>
                 </div>
             </div>
-            <div className="hidden-buttons">
-                <button>make active</button>
+            {!cardInfo.active && 
+                <div className="hidden-buttons">
+                <button onClick={(e) => makeActiveOnClick(e)}>make active</button>
                 <button>remove card</button>
-            </div>
+            </div>}
         </div>
     )
 }
