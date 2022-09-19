@@ -78,11 +78,10 @@ body {
                 border-radius: 3px;
             }
 
-            .logo {
-                width: 50px;
-                height: 30px;
-                background-color: rgb(20, 19, 15);
-            }
+            // .logo {
+            //     width: 50px;
+            //     height: 30px;
+            // }
         }
 
         .card-number {
@@ -127,6 +126,14 @@ body {
             rgb(0, 90, 160) 20%,
             rgb(0, 145, 255) 65% 66%,
             rgb(0, 100, 200) 100%);
+
+            .logo {
+                height: 40px;
+                width: 55px;
+                background-image: url('../resources/amex.png');
+                background-size: cover;
+                background-position: center;
+            }
     }
 
     .Mastercard {
@@ -135,6 +142,14 @@ body {
             rgb(0, 120, 30) 20%,
             rgb(0, 180, 55) 65% 66%,
             rgb(0, 120, 30) 100%);
+
+            .logo {
+                height: 42px;
+                width: 55px;
+                background-image: url('../resources/mastercard.png');
+                background-size: cover;
+                background-position: center;
+            }
     }
 
     .Visa {
@@ -143,6 +158,14 @@ body {
             rgb(115, 10, 0) 20%,
             rgb(190, 15, 0) 65% 66%,
             rgb(125, 10, 0) 100%);
+
+            .logo {
+                height: 25px;
+                width: 55px;
+                background-image: url('../resources/visa.png');
+                background-size: cover;
+                background-position: center;
+            }
     }
 
     .Diners {
@@ -151,6 +174,14 @@ body {
             rgb(140, 125, 0) 20%,
             rgb(190, 170, 0) 65% 66%,
             rgb(150, 135, 0) 100%);
+
+            .logo {
+                height: 40px;
+                width: 45px;
+                background-image: url('../resources/diners.png');
+                background-size: cover;
+                background-position: center;
+            }
     }
     
     .no-vendor {
@@ -159,7 +190,6 @@ body {
             rgb(110, 110, 110) 20%,
             rgb(170, 170, 170) 65% 66%,
             rgb(130, 130, 130) 100%);
-            margin-bottom: 30px;
     }
 
     .add-new-card-btn {
@@ -171,6 +201,11 @@ body {
 
     .add-new-card-form {
         width: 280px;
+        margin-top: 40px;
+
+        >*{
+            margin-bottom: 10px;
+        }
 
         .input {
             display: flex;
@@ -184,6 +219,10 @@ body {
         .small-input {
             display: flex;
             flex-direction: row;
+
+            >*{
+                width: 140px;
+            }
         }
     }
 

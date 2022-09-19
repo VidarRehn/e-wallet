@@ -103,12 +103,6 @@ body {
   border-radius: 3px;
 }
 
-.App .card .card-images .logo {
-  width: 50px;
-  height: 30px;
-  background-color: #14130f;
-}
-
 .App .card .card-number {
   font-size: 18px;
   -ms-flex-preferred-size: 25%;
@@ -152,21 +146,52 @@ body {
   background: linear-gradient(325deg, #005aa0 20%, #0091ff 65% 66%, #0064c8 100%);
 }
 
+.App .American .logo {
+  height: 40px;
+  width: 55px;
+  background-image: url("../resources/amex.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .App .Mastercard {
   background: linear-gradient(325deg, #00781e 20%, #00b437 65% 66%, #00781e 100%);
+}
+
+.App .Mastercard .logo {
+  height: 42px;
+  width: 55px;
+  background-image: url("../resources/mastercard.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .App .Visa {
   background: linear-gradient(325deg, #730a00 20%, #be0f00 65% 66%, #7d0a00 100%);
 }
 
+.App .Visa .logo {
+  height: 25px;
+  width: 55px;
+  background-image: url("../resources/visa.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .App .Diners {
   background: linear-gradient(325deg, #8c7d00 20%, #beaa00 65% 66%, #968700 100%);
 }
 
+.App .Diners .logo {
+  height: 40px;
+  width: 45px;
+  background-image: url("../resources/diners.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .App .no-vendor {
   background: linear-gradient(325deg, #6e6e6e 20%, #aaaaaa 65% 66%, #828282 100%);
-  margin-bottom: 30px;
 }
 
 .App .add-new-card-btn {
@@ -178,6 +203,11 @@ body {
 
 .App .add-new-card-form {
   width: 280px;
+  margin-top: 40px;
+}
+
+.App .add-new-card-form > * {
+  margin-bottom: 10px;
 }
 
 .App .add-new-card-form .input {
@@ -202,6 +232,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.App .add-new-card-form .small-input > * {
+  width: 140px;
 }
 
 button, input, select, option {

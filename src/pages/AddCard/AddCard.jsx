@@ -41,41 +41,57 @@ const AddCard = () => {
         navigate('/')
     }
 
+    const validityPreview = document.querySelector('#card-validity-preview')
+
+    const handleNumberChange = (e) => {
+        const numberPreview = document.querySelector('#card-number-preview')
+        numberPreview.innerText = e.target.value
+    }
+
+    const handleLogoChange = (e) => {
+        const logoPreview = document.querySelector('#logo-preview')
+        const card = logoPreview.parentElement.parentElement
+        card.removeAttribute('class')
+        card.classList.add(`${e.target.value}`)
+        card.classList.add('card')
+    }
+
     return (
         <>
             <Header text={'ADD NEW CARD'} />
             <div className="card no-vendor">
             <div className="card-images">
                 <div className="chip"></div>
-                <div className="logo"></div>
+                <div className="logo" id="logo-preview"></div>
             </div>
             <div className="card-number">
-                <p>XXXX-XXXX-XXXX-XXXX</p>
+                <p  id="card-number-preview">XXXX-XXXX-XXXX-XXXX</p>
             </div>
             <div className="card-info">
                 <div>
                     <p className="label">CARD HOLDER</p>
-                    <p>YOUR NAME</p>
+                    <p id="card-name-preview">{fullName}</p>
                 </div>
                 <div>
                     <p className="label">VALID THRU</p>
-                    <p>XX / XX</p>
+                    <p  id="card-validity-preview">XX / XX</p>
                 </div>
             </div>
         </div>
             <form className="add-new-card-form" onSubmit={(e) => addCardOnSubmit(e)}>
                 <div className="input">
                     <label htmlFor="type">VENDOR</label>
-                    <select name="type" id="type">
+                    <select onChange={(e) => handleLogoChange(e)} defaultValue='' name="type" id="type" required>
+                        <option value="" disabled>Choose</option>
                         <option value="Mastercard">Mastercard</option>
                         <option value="Visa">Visa</option>
-                        <option value="American Express">American Express</option>
+                        <option value="American">American Express</option>
                         <option value="Diners">Diners</option>
                     </select>
                 </div>
                 <div className="input">
                     <label htmlFor="card-number">CARD NUMBER</label>
-                    <input type="text" name="card-number" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" pattern="[0-9]{16}" required />
+                    <input onChange={(e) => handleNumberChange(e)} type="text" name="card-number" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" pattern="[0-9]{16}" required />
                 </div>
                 <div className="input">
                     <label htmlFor="cardholder-name">CARDHOLDER NAME</label>
