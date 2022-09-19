@@ -95,6 +95,10 @@ body {
             display: flex;
             justify-content: space-between;
 
+            p:not(.label) {
+                text-shadow: (.5px .5px 1px rgb(41, 41, 41), -.5px -.5px 1px rgb(197, 197, 197));
+            }
+
             div:first-child {
 
                 p {
@@ -111,7 +115,7 @@ body {
             display: none;
             position: absolute;
             top: 8px;
-            left: 20px;
+            left: 10px;
 
             button {
                 background-color: transparent;

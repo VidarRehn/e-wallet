@@ -127,6 +127,10 @@ body {
           justify-content: space-between;
 }
 
+.App .card .card-info p:not(.label) {
+  text-shadow: 0.5px 0.5px 1px #292929, -0.5px -0.5px 1px #c5c5c5;
+}
+
 .App .card .card-info div:first-child p {
   text-align: left;
 }
@@ -139,7 +143,7 @@ body {
   display: none;
   position: absolute;
   top: 8px;
-  left: 20px;
+  left: 10px;
 }
 
 .App .card .hidden-buttons button {
