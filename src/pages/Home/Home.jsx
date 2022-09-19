@@ -24,7 +24,7 @@ const Home = () => {
         <>
             <Header text={'E-WALLET'} />
             {user ? <CardsList user={user} /> : 'Loading...'}
-            {(cards.length < 4) ?  <button className='add-new-card-btn'><Link to={'/addcard'} state={user}>Add new card</Link></button> : <p>nu är det för många</p>}
+            {(cards.length < 4) ?  <Link className='add-new-card-btn' to={'/addcard'} state={user}><button>Add new card</button></Link> : <p className='max-msg'>You have added the maximum amount of cards</p>}
            
         </>
     )

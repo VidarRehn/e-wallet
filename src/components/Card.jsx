@@ -36,9 +36,9 @@ const Card = ( {cardInfo} ) => {
             </div>
             {!cardInfo.active && 
                 <div className="hidden-buttons">
-                <button onClick={() => makeActiveOnClick()}>make active</button>
-                <button onClick={() => removeCardOnClick()}>remove card</button>
-            </div>}
+                    <button onClick={() => makeActiveOnClick()}>Activate</button>
+                    <button onClick={() => removeCardOnClick()}><i className="fa-solid fa-trash-can"></i></button>
+                </div>}
         </div>
     )
 }

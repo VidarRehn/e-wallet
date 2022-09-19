@@ -25,13 +25,15 @@ const AddCard = () => {
             }
         }).join('')
         const cardHolder = document.querySelector('#cardholder-name').value
-        const valid = document.querySelector('#valid').value
+        const validMonth = document.querySelector('#valid-month').value
+        const validYear = document.querySelector('#valid-year').value
+        let styledValidity = `${validMonth}/${validYear}`
         const cvc = document.querySelector('#cvc').value
         const newCard = {
             fullName: cardHolder,
             type: type,
             cardNumber: styledCardNumber,
-            valid: valid,
+            valid: styledValidity,
             cvc: cvc,
             active: true
         }
@@ -99,16 +101,25 @@ const AddCard = () => {
                 </div>
                 <div className="small-input">
                     <div className="input">
-                        <label htmlFor="valid">VALID THRU</label>
-                        <input type="text" name="valid" id="valid" placeholder="XX/XX" pattern="[0-9]{4}" required />
+                        <label htmlFor="validity">VALID THRU</label>
+                        <div id="validity">
+                            <select name="valid-month" id="valid-month">
+                                {['01','02','03','04','05','06','07','08','09','11','12'].map((month, index) => <option key={index}>{month}</option>)}
+                            </select>
+                            <select name="valid-year" id="valid-year">
+                                {['22','23','24','25','26','27'].map((year,index) => <option key={index}>{year}</option>)}
+                            </select>
+                        </div>
                     </div>
                     <div className="input">
                         <label htmlFor="cvc">CVC</label>
                         <input type="text" name="cvc" id="cvc" placeholder="XXX" pattern="[0-9]{3}" required />
                     </div>
                 </div>
-                <button>ADD CARD</button>
-                <button onClick={() => navigate('/')}>See all cards</button>
+                <div  className="buttons">
+                    <button>ADD CARD</button>
+                    <button onClick={() => navigate('/')}>See all cards</button>
+                </div>
             </form>
         </>
     )

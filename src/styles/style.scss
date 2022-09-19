@@ -49,7 +49,7 @@ body {
 
         @for $i from 1 to 4 {
             .card:nth-of-type(#{$i}) {
-                top: $i*40px;
+                top: $i*45px;
             }
         }
 
@@ -77,11 +77,6 @@ body {
                 margin-bottom: 10px;
                 border-radius: 3px;
             }
-
-            // .logo {
-            //     width: 50px;
-            //     height: 30px;
-            // }
         }
 
         .card-number {
@@ -115,8 +110,22 @@ body {
         .hidden-buttons {
             display: none;
             position: absolute;
-            top: 5px;
-            right: 5px;
+            top: 8px;
+            left: 20px;
+
+            button {
+                background-color: transparent;
+                border: none;
+
+                &:hover {
+                    text-decoration: underline;
+                    font-size: 14px;
+                }
+
+                i {
+                    color: black;
+                }
+            }
         }
     }
 
@@ -192,11 +201,14 @@ body {
             rgb(130, 130, 130) 100%);
     }
 
-    .add-new-card-btn {
-        width: 280px;
-        height: 40px;
+    .add-new-card-btn, .max-msg {
         position: absolute;
         bottom: 30px;
+
+        button {
+            width: 280px;
+            height: 40px;
+        }
     }
 
     .add-new-card-form {
@@ -207,7 +219,7 @@ body {
             margin-bottom: 10px;
         }
 
-        .input {
+        .input, .buttons {
             display: flex;
             flex-direction: column;
 
@@ -231,6 +243,10 @@ body {
 button, input, select, option {
     padding: 4px 12px;
     color: rgb(30, 30, 45);
+}
+
+button {
+    cursor: pointer;
 }
 
 input, select, option, label {

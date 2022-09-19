@@ -55,15 +55,15 @@ body {
 }
 
 .App .inactive-cards .card:nth-of-type(1) {
-  top: 40px;
+  top: 45px;
 }
 
 .App .inactive-cards .card:nth-of-type(2) {
-  top: 80px;
+  top: 90px;
 }
 
 .App .inactive-cards .card:nth-of-type(3) {
-  top: 120px;
+  top: 135px;
 }
 
 .App .card {
@@ -138,8 +138,22 @@ body {
 .App .card .hidden-buttons {
   display: none;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 8px;
+  left: 20px;
+}
+
+.App .card .hidden-buttons button {
+  background-color: transparent;
+  border: none;
+}
+
+.App .card .hidden-buttons button:hover {
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.App .card .hidden-buttons button i {
+  color: black;
 }
 
 .App .American {
@@ -194,11 +208,14 @@ body {
   background: linear-gradient(325deg, #6e6e6e 20%, #aaaaaa 65% 66%, #828282 100%);
 }
 
-.App .add-new-card-btn {
-  width: 280px;
-  height: 40px;
+.App .add-new-card-btn, .App .max-msg {
   position: absolute;
   bottom: 30px;
+}
+
+.App .add-new-card-btn button, .App .max-msg button {
+  width: 280px;
+  height: 40px;
 }
 
 .App .add-new-card-form {
@@ -210,7 +227,7 @@ body {
   margin-bottom: 10px;
 }
 
-.App .add-new-card-form .input {
+.App .add-new-card-form .input, .App .add-new-card-form .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,7 +237,7 @@ body {
           flex-direction: column;
 }
 
-.App .add-new-card-form .input label {
+.App .add-new-card-form .input label, .App .add-new-card-form .buttons label {
   font-size: 12px;
 }
 
@@ -241,6 +258,10 @@ body {
 button, input, select, option {
   padding: 4px 12px;
   color: #1e1e2d;
+}
+
+button {
+  cursor: pointer;
 }
 
 input, select, option, label {
