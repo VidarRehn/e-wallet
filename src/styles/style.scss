@@ -230,6 +230,24 @@ body {
             label {
                 font-size: 12px;
             }
+
+            .add-card-btn {
+                background-color: rgb(83, 199, 72);
+
+                &:hover, &:focus {
+                    background-color: rgb(78, 228, 64);
+                }
+            }
+
+            .see-all-cards-btn {
+                background-color: transparent;
+                color: white;
+                font-weight: 100;
+
+                &:hover, &:focus {
+                    text-decoration: underline;
+                }
+            }
         }
 
         .small-input {
@@ -240,13 +258,22 @@ body {
                 width: 140px;
             }
         }
+
+        #validity {
+            display: flex;
+
+            select {
+                margin-right: 5px;
+            }
+        }
     }
 
 }
 
 button, input, select, option {
-    padding: 4px 12px;
+    padding: 8px 10px;
     color: rgb(30, 30, 45);
+    border: none;
 }
 
 button {
@@ -259,6 +286,14 @@ input, select, option, label {
 
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+
+input, select {
+    background-color: rgb(220, 220, 220);
+}
+
+input:focus, select:focus {
+    background-color: white;
 }
 
 a {

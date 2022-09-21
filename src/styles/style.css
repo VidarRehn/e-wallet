@@ -245,6 +245,24 @@ body {
   font-size: 12px;
 }
 
+.App .add-new-card-form .input .add-card-btn, .App .add-new-card-form .buttons .add-card-btn {
+  background-color: #53c748;
+}
+
+.App .add-new-card-form .input .add-card-btn:hover, .App .add-new-card-form .input .add-card-btn:focus, .App .add-new-card-form .buttons .add-card-btn:hover, .App .add-new-card-form .buttons .add-card-btn:focus {
+  background-color: #4ee440;
+}
+
+.App .add-new-card-form .input .see-all-cards-btn, .App .add-new-card-form .buttons .see-all-cards-btn {
+  background-color: transparent;
+  color: white;
+  font-weight: 100;
+}
+
+.App .add-new-card-form .input .see-all-cards-btn:hover, .App .add-new-card-form .input .see-all-cards-btn:focus, .App .add-new-card-form .buttons .see-all-cards-btn:hover, .App .add-new-card-form .buttons .see-all-cards-btn:focus {
+  text-decoration: underline;
+}
+
 .App .add-new-card-form .small-input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -259,9 +277,20 @@ body {
   width: 140px;
 }
 
+.App .add-new-card-form #validity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.App .add-new-card-form #validity select {
+  margin-right: 5px;
+}
+
 button, input, select, option {
-  padding: 4px 12px;
+  padding: 8px 10px;
   color: #1e1e2d;
+  border: none;
 }
 
 button {
@@ -274,6 +303,14 @@ input, select, option, label {
 
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+input, select {
+  background-color: gainsboro;
+}
+
+input:focus, select:focus {
+  background-color: white;
 }
 
 a {

@@ -17,7 +17,7 @@ const CardsList = ( {user} ) => {
             let newCard = {
                 fullName: (`${name.first} ${name.last}`).toUpperCase(), 
                 type: ['Mastercard', 'Visa', 'American Express', 'Diners'][Math.floor(Math.random()*4)],
-                cardNumber: '1234 1234 1234 1234',
+                cardNumber: '5226 6215 4885 6019',
                 valid: '12/25',
                 cvc: '123',
                 active: true

@@ -38,12 +38,19 @@ const AddCard = () => {
             active: true
         }
 
-        dispatch(addCard(newCard))
-        dispatch(sortCards())
-        navigate('/')
+        let cardAlreadyExists = false
+        cards.map(card => {
+            if (styledCardNumber === card.cardNumber) {
+                alert('A card with this number already seems to exist')
+                cardAlreadyExists = true
+            }
+        })
+        if (!cardAlreadyExists) {
+            dispatch(addCard(newCard))
+            dispatch(sortCards())
+            navigate('/')
+        }
     }
-
-    const validityPreview = document.querySelector('#card-validity-preview')
 
     const handleNumberChange = (e) => {
         const numberPreview = document.querySelector('#card-number-preview')
@@ -92,8 +99,8 @@ const AddCard = () => {
                     </select>
                 </div>
                 <div className="input">
-                    <label htmlFor="card-number">CARD NUMBER</label>
-                    <input onChange={(e) => handleNumberChange(e)} type="text" name="card-number" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" pattern="[0-9]{16}" required />
+                    <label htmlFor="card-number">CARD NUMBER (16 digits)</label>
+                    <input onChange={(e) => handleNumberChange(e)} type="text" name="card-number" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" pattern="[0-9]{16}" maxLength={16} required />
                 </div>
                 <div className="input">
                     <label htmlFor="cardholder-name">CARDHOLDER NAME</label>
@@ -113,12 +120,12 @@ const AddCard = () => {
                     </div>
                     <div className="input">
                         <label htmlFor="cvc">CVC</label>
-                        <input type="text" name="cvc" id="cvc" placeholder="XXX" pattern="[0-9]{3}" required />
+                        <input type="text" name="cvc" id="cvc" placeholder="XXX" pattern="[0-9]{3}" maxLength={3} required />
                     </div>
                 </div>
                 <div  className="buttons">
-                    <button>ADD CARD</button>
-                    <button onClick={() => navigate('/')}>See all cards</button>
+                    <button className="add-card-btn">ADD CARD</button>
+                    <button className="see-all-cards-btn" onClick={() => navigate('/')}>SEE ALL CARDS</button>
                 </div>
             </form>
         </>
