@@ -3,7 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #dedede;
   text-align: center;
 }
@@ -149,6 +149,7 @@ body {
 .App .card .hidden-buttons button {
   background-color: transparent;
   border: none;
+  font-weight: bold;
 }
 
 .App .card .hidden-buttons button:hover {
